@@ -2,35 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Todo app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Todo
+  <div class="wrapper">
+    <div class="header">
+      <h1>Todo</h1>
+      <button class="toggle sun" id="theme"></button>
+    </div>
 
-  <!-- Add dynamic number --> items left
+      <input type="text" class="input" id="input" placeholder="Create a new todo...">
 
-  All
-  Active 
-  Completed
+      <div class="todo-list" id="todo-list">
+        <ul class="list" id="list">
+          <li><input type="checkbox" class="check">To many things to do</li>
+          <li>To many things to do</li>
+          <li>To many things to do</li>
+          <li>To many things to do</li>
+          <li>To many things to do</li>
+        </ul>
+        <div class="info-bar" id="info-bar">
+          <div class="items-left" id="items-left"><p>x items left</p></div>
+          <button id="clear-completed" class="text-button">Clear Completed</button>
+        </div>
+      </div>
+  
+      <div class="filter-control" id="filter-control">
+        <button class="text-button" id="filter-all">All</button>
+        <button class="text-button" id="filter-active">Active</button> 
+        <button class="text-button" id="filter-completed">Completed</button>
+      </div>
 
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <div class="footer">
+      <p>Drag and drop to reorder list</p>
+    </div>
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>

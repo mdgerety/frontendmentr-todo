@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 98%);
+    background-image: url(images/bg-mobile-light.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 18px;
+    color: hsl(236, 9%, 61%);
+}
+
+h1 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-weight: 400;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 450px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0rem;
+}
+
+
+
+.toggle {
+    outline: none;
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    background-image: url(images/icon-moon.svg);
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.toggle.moon {
+    background-image: url(images/icon-sun.svg);
+}
+
+input {
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    outline: none;
+}
+
+.todo-list {
+    background-color: white;
+    border-radius: 6px;
+    margin: 1rem 0rem;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+ 
+li {
+    list-style-type: none;
+    border-bottom: 1px solid  hsl(0, 0%, 98%);
+    padding: 1rem;
+    font-size: 14px;
+    color: hsl(235, 19%, 35%);
+}
+
+.info-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-button {
+    font-family: inherit;
+    background-color: transparent;
+    border: none;
+    margin: 1rem;
+    color: hsl(236, 9%, 61%);
+    outline: none;
+}
+
+.items-left {
+    font-size: 14px;
+    padding-left: 1rem;
+}
+
+.filter-control {
+    background-color: #fff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* DARK THEME */
+body.dark {
+    background-color: hsl(237, 14%, 26%);
+    background-image: url(images/bg-mobile-dark.jpg);
+}
+
+input.dark {
+    background-color: hsl(233, 14%, 35%);
+    color: hsl(234, 39%, 85%);
+}
+
+.todo-list.dark {
+    background-color: hsl(233, 14%, 35%);
+}
+
+
+.filter-control.dark {
+    background-color: hsl(233, 14%, 35%);
+    color: hsl(234, 39%, 85%);
+}
+
+ul.dark li {
+        color: hsl(234, 39%, 85%);
+        border-bottom-color: hsl(237, 14%, 26%);
+}
+
+.text-button.dark {
+    color:hsl(234, 39%, 85%);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 600px) {
+    body {
+        background-image: url(images/bg-desktop-light.jpg);
+    }
+
+    body.dark {
+        background-image: url(images/bg-desktop-dark.jpg);
+    }
+}
+
+
+
