@@ -3,7 +3,7 @@ const input = document.getElementById('input');
 const todoList = document.getElementById('todo-list');
 const list = document.getElementById('list');
 const filterControl = document.getElementById('filter-control');
-const clearButton  = document.getElementById('clear-completed');
+const clearButton  = document.getElementById('clear-list');
 let LIST = [];
 let id = 0;
 const COMPLETE = 'fa-check-circle';
@@ -45,10 +45,12 @@ document.addEventListener('keyup', function(event) {
 list.addEventListener('click', function(event){
     let element = event.target;
     completeToDo(element);
-    toggleDone(element);
 })
 
 // CLEAR COMPLETED
+clearButton.addEventListener('click', () => {
+    list.innerHTML = "";
+})
 
 
 // ADD TODO
@@ -69,10 +71,6 @@ function completeToDo (element) {
     element.classList.toggle(INCOMPLETE);
     element.parentNode.querySelector('.text').classList.toggle
     (LINE_THROUGH);
-}
-
-function toggleDone (element) {
-    
 }
 
 
