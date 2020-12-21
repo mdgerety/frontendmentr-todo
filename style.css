@@ -8,9 +8,9 @@ body {
     align-items: center;
     justify-content: center;
     background-color: hsl(0, 0%, 98%);
-    background-image: url(images/bg-mobile-light.jpg);
+    background-image: url(images/bg-desktop-light.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: fit;
     font-size: 18px;
     color: hsl(236, 9%, 61%);
 }
@@ -36,8 +36,6 @@ h1 {
     justify-content: space-between;
     padding: 2rem 0rem;
 }
-
-
 
 .toggle {
     outline: none;
@@ -76,9 +74,15 @@ ul {
 li {
     list-style-type: none;
     border-bottom: 1px solid  hsl(0, 0%, 98%);
-    padding: 1rem;
     font-size: 14px;
     color: hsl(235, 19%, 35%);
+    display: flex;
+    align-items: center;
+}
+
+li i {
+    padding: 1rem;
+
 }
 
 .info-bar {
@@ -95,6 +99,14 @@ li {
     margin: 1rem;
     color: hsl(236, 9%, 61%);
     outline: none;
+}
+
+#clear-completed:hover {
+    color: hsl(220, 98%, 61%);
+}
+
+#clear-completed.dark:hover {
+    color: hsl(236, 33%, 92%);
 }
 
 .items-left {
@@ -118,7 +130,7 @@ li {
 /* DARK THEME */
 body.dark {
     background-color: hsl(237, 14%, 26%);
-    background-image: url(images/bg-mobile-dark.jpg);
+    background-image: url(images/bg-desktop-dark.jpg);
 }
 
 input.dark {
@@ -145,16 +157,16 @@ ul.dark li {
     color:hsl(234, 39%, 85%);
 }
 
-/* MEDIA QUERIES */
-@media (min-width: 600px) {
-    body {
-        background-image: url(images/bg-desktop-light.jpg);
-    }
-
-    body.dark {
-        background-image: url(images/bg-desktop-dark.jpg);
-    }
+/* VARIABLE CLASSES */
+.line-through {
+    text-decoration: line-through;
+    opacity: 0.5;
 }
+
+.fa-check-circle {
+    color: #cf50e6;
+}
+
 
 
 
